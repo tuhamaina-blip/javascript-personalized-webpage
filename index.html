@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Webpage</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-center px-4 py-10">
+
+    <!-- Form -->
+    <div class="bg-white rounded-2xl shadow p-6 w-full max-w-md mb-6">
+        <h1 class="text-2xl font-bold text-gray-800 mb-1">Welcome</h1>
+        <p class="text-gray-500 text-sm mb-4">Enter your details to get started</p>
+
+        <div class="mb-4">
+            <label class="block text-sm font-semibold text-gray-700 mb-1">Your Name</label>
+            <input id="input-name" type="text" placeholder="John Doe"
+                class="w-full border border-gray-200 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-400">
+        </div>
+
+        <div class="mb-6">
+            <label class="block text-sm font-semibold text-gray-700 mb-1">Your Age</label>
+            <input id="input-age" type="number" placeholder="25"
+                class="w-full border border-gray-200 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-400">
+        </div>
+
+        <button onclick="saveUser()"
+            class="w-fit mx-auto block bg-gray-900 text-white px-6 py-2 rounded-lg text-sm font-semibold hover:bg-gray-700">
+            Submit
+        </button>
+    </div>
+
+    <!-- Results -->
+    <div id="results" class="hidden bg-white rounded-2xl shadow p-6 w-full max-w-md">
+
+        <!-- Greeting -->
+        <p id="greeting" class="text-xl font-bold text-orange-500 mb-4"></p>
+
+        <!-- Age in months -->
+        <p id="age-months" class="text-sm text-gray-500 mb-4"></p>
+
+        <!-- Adult content check -->
+        <div id="content-check" class="bg-gray-100 rounded-lg px-4 py-3 text-sm text-gray-700 mb-6"></div>
+
+        <!-- Motivational quotes -->
+        <h2 class="text-sm font-bold text-gray-700 mb-2">Motivational Quote</h2>
+        <div id="quotes" class="flex flex-col gap-2"></div>
+
+        <!-- Reset button -->
+        <button onclick="resetUser()"
+            class="mt-6 w-fit mx-auto block bg-orange-500 text-white px-6 py-2 rounded-lg text-sm font-semibold hover:bg-orange-600">
+            Start Over
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
