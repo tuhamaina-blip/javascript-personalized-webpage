@@ -1,7 +1,7 @@
 function saveUser() {
 
-    var name = document.getElementById("input-name").value;
-    var age = document.getElementById("input-age").value;
+    const name = document.getElementById("input-name").value;
+    const age = document.getElementById("input-age").value;
 
     if (!name || !age) {
         alert("Please enter your name and age.");
@@ -25,10 +25,10 @@ function saveUser() {
     }
 
     // Show motivational quote 5 times using a loop
-    var quote = "Believe in yourself!";
-    var quotesDiv = document.getElementById("quotes");
+    const quote = "Believe in yourself!";
+    const quotesDiv = document.getElementById("quotes");
 
-    for (var i = 0; i < 5; i++) {
+    for (const i = 0; i < 5; i++) {
         quotesDiv.innerHTML += `<div class="bg-gray-100 px-4 py-3 rounded-lg text-sm text-gray-700">${quote}</div>`;
     }
 
