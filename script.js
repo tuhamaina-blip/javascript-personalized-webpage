@@ -28,7 +28,7 @@ function saveUser() {
     const quote = "Believe in yourself!";
     const quotesDiv = document.getElementById("quotes");
 
-    for (const i = 0; i < 5; i++) {
+    for (var i = 0; i < 5; i++) {
         quotesDiv.innerHTML += `<div class="bg-gray-100 px-4 py-3 rounded-lg text-sm text-gray-700">${quote}</div>`;
     }
 
